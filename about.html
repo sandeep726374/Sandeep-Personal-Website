@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sandeep.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <style>
+        /* Existing Styles */
+        .icon i {
+            transition: transform 0.3s ease;
+        }
+    
+        .icon:hover i {
+            transform: scale(1.8); 
+        }
+    
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 10px 20px;
+        }
+    
+        .heading {
+            margin-bottom: 20px;
+        }
+    
+        .skills-boxs {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: row;
+            background-color: #323946; 
+            padding: 15px;
+            border-radius: 10px; 
+            margin: 20px 0; 
+        }
+    
+        .skills-boxs div {
+            text-align: center;
+            flex: 1; 
+        }
+    
+        .skills-boxs img {
+            width: 60px; 
+            height: 60px;
+            margin: 0 auto; 
+            transition: transform 0.3s ease;
+        }
+    
+        .skills-boxs img:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 0.85rem var(--main-color));
+        }
+    
+        .skills-box img.codechef, .skills-box img.leetcode {
+            width: 70px; 
+            height: 70px;
+        }
+    
+        .elements {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    
+        .elements span {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    
+        h3 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+            font-size: large;
+        }
+    
+        /* Media Query for Tablets and Smaller Screens */
+        @media (max-width: 768px) {
+            .skills-boxs {
+                flex-direction: column; /* Stack the elements vertically */
+                padding: 10px;
+            }
+    
+            .skills-boxs div {
+                margin-bottom: 15px;
+            }
+    
+            .skills-boxs img {
+                width: 50px;
+                height: 50px;
+            }
+    
+            h3 {
+                font-size: medium; /* Adjust text size */
+            }
+    
+            .button {
+                margin: 20px 5px; /* Reduce button margin */
+            }
+        }
+    
+        /* Media Query for Mobile Devices (max-width: 450px) */
+        @media (max-width: 450px) {
+            html {
+                font-size: 50%; /* Reduce the base font size for smaller screens */
+            }
+    
+            .navbar {
+                display: none; /* Hide the navbar on mobile */
+            }
+    
+            .heading {
+                font-size: 2.5rem; /* Reduce heading size */
+                text-align: center;
+            }
+    
+            .skills-boxs {
+                flex-direction: column; /* Stack skills elements vertically */
+            }
+    
+            .skills-boxs img {
+                width: 40px;
+                height: 40px;
+            }
+    
+            .elements span {
+                font-size: 1.4rem; /* Reduce text size in skills */
+            }
+    
+            h3 {
+                font-size: 1.2rem; /* Adjust body text size for readability */
+                line-height: 1.4;
+            }
+    
+            .button {
+                margin: 10px 0;
+            }
+    
+            .button .btn {
+                padding: 0.5rem 2rem; /* Adjust button padding */
+                font-size: 1.2rem; /* Smaller button text */
+            }
+    
+            .skills-boxs img:hover {
+                transform: none; /* Disable image hover scale on small screens */
+            }
+    
+            /* Adjust image and button sizes */
+            .button .btn {
+                width: 80%;
+                padding: 10px;
+            }
+    
+            .skills-boxs div {
+                margin: 10px 0;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <header class="header">
+        <a href="#" class="logo"></a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="index.html#portfolio">Projects</a>
+            <a href="index.html#contact">Contact</a>
+            <a class="icon" href="index.html#about"><i class='bx bxs-exit'></i></a>
+        </nav>
+    </header>
+
+    <section class="about-info">
+        <h2 class="heading">About <span>Me</span></h2>
+        
+        <h3>
+            👋 Hello! I'm Sandeep Kanugula. Currently, I'm in my 3rd year of BTech at the Lendi Institute of Engineering and Technology, where I am pursuing a degree in Computer Science and Systems Engineering. 📚✨
+        </h3><br><br>
+        
+        <h3>
+            🔍 I'm passionate about Software Development, AI, and UI/UX Design. As a budding Web Developer, I enjoy building dynamic, responsive, and user-friendly websites. I have experience in creating various types of websites, including static, dynamic, responsive, portfolio, and personal sites. 🌐💻
+        </h3><br>
+
+        <h3>
+            🛠️ My skill set includes programming languages such as C, Python, Java, HTML, CSS, JavaScript, along with frameworks like Django. I also have a solid understanding of DBMS, MySQL, and Data Structures and Algorithms (DSA). I've worked on several projects, including the Emergency Eye app, which focuses on safety and security, and a Car Price Predictor that utilizes predictive analysis. 🚗📊
+        </h3><br>
+
+        <h3>
+            💡 In addition to my technical skills, I am a strong advocate for providing opportunities for my peers to practice coding. I've participated in the Hack With Vizag 2.0 hackathon, where I learned the importance of teamwork and problem-solving under pressure. 🤝🔥
+        </h3><br>
+
+        <h3>
+            📸 Beyond coding, I have a keen interest in photography and photo editing. I enjoy capturing moments and enhancing them through editing to create visually appealing images. 📷✂️
+        </h3><br>
+
+        <h3>
+            🚀 I continuously strive to improve my problem-solving skills in DSA by practicing on platforms like LeetCode, CodeChef, and HackerRank, where I've solved over 120+ problems on CodeChef, 50+ on LeetCode, and 70+ on HackerRank. I'm always eager to learn and grow in the tech field! 📈🔍
+        </h3>
+        <br>
+        <h3>
+            🌟 Feel free to connect with me to discuss projects, collaborations, or any opportunities in the tech world!
+        </h3>
+
+        <div class="skills-boxs">
+            <div class="elements">
+                <a href="https://www.hackerrank.com/profile/sandeepkanugula2"><img class="hackerrank" src="logos/hackerrank.png" alt="HackerRank"></a>
+                <span>HackerRank</span>
+            </div>
+            <div class="elements">
+                <a href="https://www.codechef.com/users/sandeep726374"><img class="codechef" src="logos/codechef.svg" alt="CodeChef"></a>
+                <span>CodeChef</span>
+            </div>
+            <div class="elements">
+                <a href="https://leetcode.com/u/sandeep726374/"><img class="leetcode" src="logos/leetcode.svg" alt="LeetCode"></a>
+                <span>LeetCode</span>
+            </div>
+        </div>
+
+        <div class="button"><a href="index.html#about" class="btn">Go Back</a></div> 
+
+
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script src="sandeep.js"></script>
+    </section>
+
+</body>
+</html>
