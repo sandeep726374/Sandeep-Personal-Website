@@ -49,30 +49,30 @@ const typed = new Typed('.multiple-text', {
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Select the form and add a submit event listener
-    const form = document.querySelector('section.contact form');
+// document.addEventListener('DOMContentLoaded', function () {
+//     // Select the form and add a submit event listener
+//     const form = document.querySelector('section.contact form');
     
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
+//     form.addEventListener('submit', function(event) {
+//         event.preventDefault(); // Prevent the default form submission
         
-        // Collect form data
-        const formData = {
-            name: form.querySelector('input[name="name"]').value,
-            email: form.querySelector('input[name="email"]').value,
-            mobile: form.querySelector('input[name="mobile"]').value,
-            subject: form.querySelector('input[name="subject"]').value,
-            message: form.querySelector('textarea[name="message"]').value
-        };
+//         // Collect form data
+//         const formData = {
+//             name: form.querySelector('input[name="name"]').value,
+//             email: form.querySelector('input[name="email"]').value,
+//             mobile: form.querySelector('input[name="mobile"]').value,
+//             subject: form.querySelector('input[name="subject"]').value,
+//             message: form.querySelector('textarea[name="message"]').value
+//         };
 
-        // Send form data using EmailJS
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
-            .then(function(response) {
-                alert('Message sent successfully!'); // Show a success message
-                form.reset(); // Reset the form fields
-            }, function(error) {
-                alert('Failed to send the message. Please try again later.'); // Show an error message
-            });
-    });
-});
+//         // Send form data using EmailJS
+//         emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+//             .then(function(response) {
+//                 alert('Message sent successfully!'); // Show a success message
+//                 form.reset(); // Reset the form fields
+//             }, function(error) {
+//                 alert('Failed to send the message. Please try again later.'); // Show an error message
+//             });
+//     });
+// });
 
