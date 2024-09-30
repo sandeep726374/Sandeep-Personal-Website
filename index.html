@@ -211,16 +211,16 @@
 
     <section class="contact" id="contact">
         <div class="heading">Contact <span>Me!</span></div>
-        <form action="sendEmail.php" method="post">
+        <form id="contact-form">
             <div class="input-box">
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" id="fullname" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" id="email_id" placeholder="Email Address" required>
             </div>
             <div class="input-box">
-                <input type="number" name="mobile" placeholder="Mobile Number" required>
-                <input type="text" name="subject" placeholder="Email Subject" required>
+                <input type="number" name="mobile" id="number" placeholder="Mobile Number" required>
+                <input type="text" name="subject" id="subject" placeholder="Email Subject" required>
             </div>
-            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
             <input type="submit" value="Send Message" class="btn">
         </form>
     </section>
@@ -245,13 +245,45 @@
     <script src="sandeep.js"></script>
 
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-        (function() {
-            emailjs.init("YOUR_USER_ID"); // Replace "YOUR_USER_ID" with your EmailJS User ID
-        })();
-    </script>
-    
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+<script type="text/javascript">
+    // Initialize EmailJS with your public key
+    (function(){
+        emailjs.init("qNo5EAZQiUptmhVgh"); // Your public key
+    })();
+
+    // Function to send email
+    function SendMail(event) {
+        event.preventDefault();  // Prevent form from submitting the traditional way
+
+        // Collect form data
+        var params = {
+            from_name: document.getElementById("fullname").value,
+            email_id: document.getElementById("email_id").value,
+            number: document.getElementById("number").value,
+            subject: document.getElementById("subject").value,
+            message: document.getElementById("message").value
+        };
+
+        // Send email using EmailJS
+        emailjs.send("service_zo0w3fh", "template_tvgrmcj", params)
+        .then(function(res) {
+            alert("Email sent successfully! Status: " + res.status);
+        }, function(error) {
+            console.log("Failed to send email. Error: ", error);
+            alert("Failed to send message. Please try again.");
+        });
+    }
+
+    // Attach the send email function to form submit event
+    document.getElementById("contact-form").addEventListener("submit", SendMail);
+</script>
+
+
+
 
 </body>
 </html>
