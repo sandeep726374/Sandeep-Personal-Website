@@ -567,6 +567,8 @@ span{
     }
     .about-img img {
         width: 80vw;
+        display:none;
+        
     }
 
 
@@ -699,6 +701,7 @@ span{
 
     .about-img img {
         width: 90vw;
+        display:none;
     }
     .footer{
         flex-direction: column-reverse;
