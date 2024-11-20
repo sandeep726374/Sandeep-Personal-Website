@@ -701,7 +701,7 @@ span{
 
     .about-img img {
         width: 90vw;
-        display:none;
+/*         display:none; */
     }
     .footer{
         flex-direction: column-reverse;
