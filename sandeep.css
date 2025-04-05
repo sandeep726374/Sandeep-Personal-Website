@@ -78,13 +78,14 @@ section{
     align-items: center;
     flex-direction: row;
 }
-.sandeep-img{
-    height: 250px;
+.sandeep-img,
+.about-img img {
     width: 250px;
+    height: 250px;
     border-radius: 50%;
-    animation:floatImage 3s ease-in-out infinite ;
+    object-fit: cover;
+    animation: floatImage 3s ease-in-out infinite;
 }
-
 @keyframes floatImage{
     0%{
         transform: translateY(0);
@@ -437,6 +438,11 @@ span{
      .services{
         padding-bottom: 7rem;
      }
+     .sandeep-img,
+     .about-img img {
+         width: 200px;
+         height: 200px;
+     }
 
      .portfolio{
         padding-bottom: 7rem;
@@ -484,20 +490,16 @@ span{
     .home-content h1{
         font-size: 4.5rem;
     }
-    .home-img img{
-        width: 50vw;
-        height: 50vh;
-        margin-top: 3rem;
+    .sandeep-img,
+    .about-img img {
+        width: 350px;
+        height: 350px;
     }
 
     .about{
         flex-direction: column-reverse; /* ✅ Image first */
     }
-    .about img{
-        width: 50vw;
-        height: 50vh;
-        margin-top: 3rem;
-    }
+  
     .section h2{
         margin-bottom: 3rem;
     }
@@ -522,6 +524,14 @@ span{
 {
     .portfolio-container{
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .sandeep-img,
+    .about-img img {
+        width: 250px;
+        height: 250px;
     }
 }
 
@@ -558,9 +568,7 @@ span{
     .about-content p {
         font-size: 1.4rem;
     }
-    .about-img img {
-        width: 65vw;
-    }
+  
 
     .navbar {
         display: none;
@@ -583,10 +591,7 @@ span{
     .home {
         flex-direction: column-reverse; /* ✅ Image first */
     }
-    .home-img img {
-        width: 65vw;
-        margin-top: 3rem;
-    }
+   
     .home-content h1 {
         font-size: 3.5rem;
     }
@@ -654,10 +659,7 @@ span{
 
     /* <!-- general improvements --> */
 
-    img {
-        width: 100%;
-        height: auto;
-    }
+   
     h1, h2, h3, p {
         font-size: smaller;
         line-height: 1.4;
@@ -673,13 +675,7 @@ span{
     html {
         font-size: 45%;
     }
-    .home-img img {
-        width: 90vw;
-    }
-
-    .about-img img {
-        width: 90vw;
-    }
+   
     .footer{
         flex-direction: column-reverse;
     }
@@ -716,3 +712,6 @@ span{
     border-radius: 5px;
     cursor: pointer;
 }
+
+
+
