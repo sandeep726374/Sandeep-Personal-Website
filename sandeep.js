@@ -39,7 +39,7 @@ ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content,.head, .about-info ', { origin: 'left' });
 
 const typed = new Typed('.multiple-text', { 
-    strings: ['Frontend Developer !!', 'Python Developer !!', 'Prompt Engineer !!','Tech Enthusiast !!'],
+    strings: ['Freelancer !!','Frontend Developer !!', 'Python Developer !!', 'Prompt Engineer !!','Tech Enthusiast !!'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
@@ -66,7 +66,7 @@ const typed = new Typed('.multiple-text', {
 //         };
 
 //         // Send form data using EmailJS
-//         emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+//         emailjs.send('service_2l7j7nu', 'template_4tj0g5e', formData)
 //             .then(function(response) {
 //                 alert('Message sent successfully!'); // Show a success message
 //                 form.reset(); // Reset the form fields
@@ -75,4 +75,5 @@ const typed = new Typed('.multiple-text', {
 //             });
 //     });
 // });
+
 
