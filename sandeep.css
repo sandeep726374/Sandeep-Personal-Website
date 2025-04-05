@@ -449,7 +449,6 @@ span{
         padding: 2rem 3%;
     }
 }
-
 @media (max-width: 768px)
 {
     #menu-icon{
@@ -472,14 +471,12 @@ span{
         display: flex;
     }
     .navbar a{
-
         display: block;
         font-size: 2rem;
         margin: 2rem 0;
     }
     .home{
-
-        flex-direction: column;
+        flex-direction: column-reverse; /* ✅ Image first */
     }
     .home-content h3{
         font-size: 2.8rem;
@@ -488,15 +485,17 @@ span{
         font-size: 4.5rem;
     }
     .home-img img{
-        width: 70vw;
+        width: 50vw;
+        height: 50vh;
         margin-top: 3rem;
     }
 
     .about{
-        flex-direction: column-reverse;
+        flex-direction: column-reverse; /* ✅ Image first */
     }
     .about img{
-        width: 70vw;
+        width: 50vw;
+        height: 50vh;
         margin-top: 3rem;
     }
     .section h2{
@@ -509,7 +508,6 @@ span{
         grid-template-columns: repeat(2, 1fr);
     }
 
-
     .services-container {
         flex-direction: column;
         gap: 3rem;
@@ -518,8 +516,6 @@ span{
     .skills-container {
         grid-template-columns: repeat(2, 1fr);
     }
-
-
 }
 
 @media (max-width: 617px)
@@ -542,7 +538,6 @@ span{
         overflow-x: hidden;
     }
 
-
     .contact form textarea {
         width: 100%;
     }
@@ -554,10 +549,8 @@ span{
         cursor: pointer;
     }
 
-
-
     .about {
-        flex-direction: column-reverse;
+        flex-direction: column-reverse; /* ✅ Image first */
     }
     .about-content h2 {
         font-size: 2.4rem;
@@ -566,11 +559,8 @@ span{
         font-size: 1.4rem;
     }
     .about-img img {
-        width: 80vw;
-        display:none;
-        
+        width: 65vw;
     }
-
 
     .navbar {
         display: none;
@@ -590,12 +580,11 @@ span{
         margin: 1.5rem 0;
     }
 
-    
     .home {
-        flex-direction: column;
+        flex-direction: column-reverse; /* ✅ Image first */
     }
     .home-img img {
-        width: 80vw;
+        width: 65vw;
         margin-top: 3rem;
     }
     .home-content h1 {
@@ -615,8 +604,6 @@ span{
         font-size: 1.4rem;
     }
 
-
-
     .services-container {
         flex-direction: column;
         gap: 2rem;
@@ -631,7 +618,6 @@ span{
         font-size: 1.4rem;
     }
 
-
     .skills-container {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -639,8 +625,6 @@ span{
     .skills-box h3 {
         font-size: 1.8rem;
     }
-
-
 
     .portfolio-container {
         grid-template-columns: 1fr;
@@ -659,8 +643,6 @@ span{
         font-size: 1.4rem;
     }
 
-
-
     .footer {
         flex-direction: column;
         text-align: center;
@@ -669,9 +651,6 @@ span{
         font-size: 1.4rem;
         margin-top: 1rem;
     }
-
-
-
 
     /* <!-- general improvements --> */
 
@@ -687,7 +666,6 @@ span{
         padding: 1rem 2rem;
         font-size: 1.4rem;
     }
-
 }
 
 @media (max-width: 365px)
@@ -701,7 +679,6 @@ span{
 
     .about-img img {
         width: 90vw;
-/*         display:none; */
     }
     .footer{
         flex-direction: column-reverse;
@@ -712,10 +689,6 @@ span{
     }
 }
 
-
-
-
-    
 .full-info-section {
     padding: 20px;
     background-color: var(--second-bg-color);
